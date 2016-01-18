@@ -9,6 +9,7 @@
 
     <modules>
         <module>gwt-material</module>
+        <module>../gwt-material-addins</module>
     </modules>
 
     <name>Gwt Material Parent</name>
@@ -67,16 +68,14 @@
     </licenses>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <name>Sonatype Nexus snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Nexus release repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>esselunga.releases</id>
+            <url>http://repository.esselunga.net/nexus-webapp/content/repositories/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>esselunga.snapshots</id>
+            <url>http://repository.esselunga.net/nexus-webapp/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <build>
