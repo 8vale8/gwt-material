@@ -20,12 +20,13 @@ package gwt.material.design.client.constants;
  * #L%
  */
 
+import javax.annotation.Generated;
+
 import gwt.material.design.client.base.helper.EnumHelper;
 
-/**
- * @author Ben Dol
- */
+@Generated(value = "gwt.material.design.gen.IconTypeGenerator", date = "2016-01-04T19:04:51Z")
 public enum IconType implements CssType {
+
     DEFAULT(""),
     ROTATION_3D("3d_rotation"),
     ACCESSIBILITY("accessibility"),
@@ -886,8 +887,8 @@ public enum IconType implements CssType {
     VIDEO_LIBRARY("video_library"),
     SPA("spa"),
     SORT_BY_ALPHA("sort_by_alpha"),
-    PICTURE_AS_PDF("picture_as_pdf"),;
-    
+    PICTURE_AS_PDF("picture_as_pdf");
+
     private final String cssClass;
 
     IconType(final String cssClass) {

@@ -1,4 +1,4 @@
-package gwt.material.design.client.ui.html;
+package gwt.material.design.client.base;
 
 /*
  * #%L
@@ -20,26 +20,20 @@ package gwt.material.design.client.ui.html;
  * #L%
  */
 
-import com.google.gwt.dom.client.Document;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.InputElement;
-import gwt.material.design.client.base.MaterialWidget;
 
-/**
- * @author guaido79
- */
-public class DateInput extends MaterialWidget {
-    public DateInput() {
-        super(InputElement.as(Document.get().createTextInputElement()));
-        getElement().setAttribute("type", "date");
-    }
+import gwt.material.design.client.constants.Axis;
 
-    @Override
-    public void clear() {
-        clearDpValue(getElement());
-    }
+public interface HasDepth {
 
-    private native void clearDpValue(Element e) /*-{
-        $wnd.jQuery(e).val('');
-    }-*/;
+    /**
+     * Equivalent to z-index to build a layer between material componens 0 - 999
+     * @param depth
+     */
+    void setDepth(int depth);
+
+    /**
+     * Get the z-index value 0 - 999
+     * @return
+     */
+    int getDepth();
 }
