@@ -107,13 +107,17 @@ public class MaterialValueBox<T> extends MaterialWidget implements HasChangeHand
 
     private final ErrorMixin<MaterialValueBox<T>, MaterialLabel> errorMixin = new ErrorMixin<>(this, lblError, valueBoxBase);
 
-    public MaterialValueBox(ValueBoxBase<T> tValueBox) {
+    public MaterialValueBox() {
         super(Document.get().createDivElement());
         setStyleName("input-field");
+    }
+    
+    public MaterialValueBox(ValueBoxBase<T> tValueBox) {
+        this();
         initValueBox(tValueBox);
     }
 
-    private void initValueBox(ValueBoxBase<T> tValueBox) {
+    public void initValueBox(ValueBoxBase<T> tValueBox) {
         valueBoxBase = tValueBox;
         add(valueBoxBase);
     }
@@ -537,6 +541,7 @@ public class MaterialValueBox<T> extends MaterialWidget implements HasChangeHand
 
     @Override
     public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
         valueBoxBase.setEnabled(enabled);
     }
 }
